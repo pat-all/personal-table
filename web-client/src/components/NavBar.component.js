@@ -5,6 +5,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
+import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 
@@ -50,9 +51,12 @@ export default function ButtonAppBar() {
               Login
             </NavLink>
           </Button>
-          <NavLink style={navClass} to='#'>
+          <Link
+            style={navClass}
+            href='https://github.com/pat-all/personal-table'
+          >
             <GitHubIcon />
-          </NavLink>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
