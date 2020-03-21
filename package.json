@@ -1,0 +1,31 @@
+{
+  "name": "personal-table",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "pm2 start app.js --watch",
+    "web": "npm run start --prefix web-client",
+    "dev": "concurrently \"npm run start\" \"npm run web\"",
+    "client:build": "npm run build --prefix web-client"
+  },
+  "keywords": [
+    "table",
+    "personal",
+    "test",
+    "task"
+  ],
+  "author": "Petr Topalov <topalov.petr@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.5"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  }
+}

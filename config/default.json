@@ -1,0 +1,6 @@
+{
+  "port": 3300,
+  "mongoURI": "mongodb+srv://admin:admin123@cluster0-o3knp.mongodb.net/test?retryWrites=true&w=majority",
+  "secret": "super secret string",
+  "notesOnList": 5
+}
