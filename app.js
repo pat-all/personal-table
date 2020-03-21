@@ -25,9 +25,9 @@ const PORT = process.env.PORT || config.get("port") || 80;
 const MONGOURI = config.get("mongoURI");
 
 app.use("/", express.static(path.join(__dirname, "web-client", "build")));
-/*app.get("*", (req, res) => {
+app.get("*", (req, res) => {
   res.sendfile(path.resolve(__dirname, "web-client", "build", "index.html"));
-});*/
+});
 
 // connecting to data base and run server
 async function runServerWithDB() {
