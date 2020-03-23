@@ -41,11 +41,8 @@ router.post(
       });
 
       await newUser.save();
-      console.log("new User:", newUser);
 
-      res
-        .status(201)
-        .json({ message: "user was created successfully", data: newUser });
+      res.status(201).json({ message: "user was created successfully" });
     } catch (e) {
       console.log(e.message);
       res.status(500).json({ message: "Error! we have some problems" });
