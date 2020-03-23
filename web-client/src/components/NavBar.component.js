@@ -37,12 +37,17 @@ export default function ButtonAppBar() {
             Personal table
           </Typography>
           <Button color='inherit'>
+            <NavLink style={navClass} to='/'>
+              Docs
+            </NavLink>
+          </Button>
+          <Button color='inherit'>
             <NavLink style={navClass} to='/new'>
               New
             </NavLink>
           </Button>
           <Button color='inherit'>
-            <NavLink style={navClass} to='/'>
+            <NavLink style={navClass} to='/table'>
               Table
             </NavLink>
           </Button>

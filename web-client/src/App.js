@@ -10,6 +10,7 @@ import SingUp from "./pages/Register.page";
 import SimpleTable from "./pages/Table.page";
 import LogOut from "./pages/LogOut.page";
 import NewNote from "./pages/NewNote.page";
+import DocPage from "./pages/Doc.page";
 
 import PrivateRoute from "./components/PrivateRoute.component";
 
@@ -27,10 +28,14 @@ function App() {
           <ButtonAppBar />
           <Switch>
             <Route exact path='/'>
+              <DocPage />
+            </Route>
+            <Route path='/table'>
               <SimpleTable />
             </Route>
             <Route path='/login'>{isAuth ? <LogOut /> : <SingIn />}</Route>
             <Route path='/register'>{isAuth ? <LogOut /> : <SingUp />}</Route>
+
             <PrivateRoute path='/new'>
               <NewNote />
             </PrivateRoute>
